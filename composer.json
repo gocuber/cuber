@@ -4,9 +4,16 @@
     "keywords": ["framework", "cuber"],
     "license": "MIT",
     "type": "project",
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/gocuber/framework"
+        }
+    ],
     "require": {
         "php": "^7.0.0",
-        "gocuber/framework": "2.0.*"
+        "gocuber/framework": "dev-master"
     },
     "autoload": {
         "classmap": [

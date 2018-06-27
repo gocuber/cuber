@@ -3,14 +3,17 @@
 /**
  * index.php
  *
- * @author Cube <dafei.net@gmail.com>
+ * @author Cuber <dafei.net@gmail.com>
  */
 
-	date_default_timezone_set('PRC');
-	header("Content-type: text/html; charset=utf-8");
+define('CUBER_START', microtime(true));
+define('APP_DEBUG', true);
+ini_set('display_errors','on');
+error_reporting(-1);
 
-	define('APP_DIR', dirname(__DIR__) . '/app/');
+date_default_timezone_set('PRC');
+header("Content-type: text/html; charset=utf-8");
 
-	require(APP_DIR . '../cube/common/cube.php');
+require __DIR__.'/../vendor/autoload.php';
 
-	Cube::run();
+(new Cuber\Foundation\Application(__DIR__.'/../'))->run();

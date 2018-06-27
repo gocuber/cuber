@@ -3,9 +3,9 @@
 /**
  * libs\User_List
  */
-namespace libs;
+namespace App\libs\User;
 
-class User_List
+class List
 {
 
 	public function get()

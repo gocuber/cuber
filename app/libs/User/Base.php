@@ -3,7 +3,7 @@
 /**
  * libs\User\Base
  */
-namespace libs\User;
+namespace App\libs\User;
 
 class Base
 {

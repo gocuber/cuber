@@ -3,9 +3,11 @@
 /**
  * default
  */
-namespace controllers;
+namespace App\Controllers;
 
-class Index extends \Controller
+use Cuber\Foundation\Controller;
+
+class Index extends Controller
 {
 
     public function index()

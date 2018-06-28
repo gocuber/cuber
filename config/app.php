@@ -3,7 +3,7 @@
 /**
  * config
  *
- * @author Cube <dafei.net@gmail.com>
+ * @author Cuber <dafei.net@gmail.com>
  */
 
 $_G = [];

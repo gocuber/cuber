@@ -1,34 +1,35 @@
 <?php
 
 /**
- * 演示
+ * App\Controllers\Demo
+ *
+ * @author Cuber <dafei.net@gmail.com>
  */
-namespace controllers;
+namespace App\Controllers;
 
-use libs\User_List;
-use libs\User\Base as User_Base;
+use Cuber\Foundation\Controller;
+use App\Libs\User\Base as User_Base;
 
-class Demo extends \Controller
+class Demo extends Controller
 {
 
-    public function __construct($opt = [])
+    public function __construct()
     {
-        parent::__construct($opt);
+        parent::__construct();
     }
 
     public function welcome()
     {
-        s('Welcome to CubePHP !');
+        s('Welcome to Cuber !');
     }
 
     private function view()
     {
-        s(time());
+        s($_SERVER);
     }
 
     public function libs()
     {
-        s((new User_List())->get());
         s((new User_Base())->get());
     }
 

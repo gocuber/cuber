@@ -3,18 +3,16 @@
 /**
  * User
  *
- * 用户表
+ * @author Cuber <dafei.net@gmail.com>
  */
-namespace models;
+namespace Models;
 
-class User extends \Model
+use Cuber\Database\Model;
+
+class User extends Model
 {
 
-    protected $_key = 'default';
-
     protected $_name = 'uc_user';
-
-    protected $_primarykey = 'id';
 
     protected $_fields = [
         'id',            // 用户id

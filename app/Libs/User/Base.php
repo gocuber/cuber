@@ -1,16 +1,18 @@
 <?php
 
 /**
- * libs\User\Base
+ * App\Libs\User\Base
+ *
+ * @author Cuber <dafei.net@gmail.com>
  */
-namespace App\libs\User;
+namespace App\Libs\User;
 
 class Base
 {
 
 	public function get()
 	{
-        return 'libs\User\Base';
+        return 'Libs\User\Base';
 	}
 
 }

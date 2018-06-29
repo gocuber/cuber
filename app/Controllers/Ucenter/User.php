@@ -1,11 +1,15 @@
 <?php
 
 /**
- * Ucenter\User
+ * App\Controllers\Ucenter\User
+ *
+ * @author Cuber <dafei.net@gmail.com>
  */
-namespace controllers\Ucenter;
+namespace App\Controllers\Ucenter;
 
-class User extends \Controller
+use Cuber\Foundation\Controller;
+
+class User extends Controller
 {
 
     /**

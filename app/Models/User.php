@@ -5,7 +5,7 @@
  *
  * @author Cuber <dafei.net@gmail.com>
  */
-namespace Models;
+namespace App\Models;
 
 use Cuber\Database\Model;
 

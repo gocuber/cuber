@@ -12,7 +12,7 @@ class Base
 
 	public function get()
 	{
-        return 'Libs\User\Base';
+        return 'App\Libs\User\Base';
 	}
 
 }

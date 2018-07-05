@@ -8,10 +8,19 @@
 
 return [
 
+    'name' => 'Cuber',
+
+    'timezone' => 'PRC',
+
+    'charset' => 'utf-8',
+
+    'app_debug' => true,
+
     // alias
 
     'alias' => [
         'Route' => 'Cuber\\Foundation\\Route',
+        'View' => 'Cuber\\Foundation\\View',
     ],
 
     // 数据库配置
@@ -28,5 +37,7 @@ return [
             'slave'    => [], // slave1 slave2 slave3 slave4 ...
         ],
     ],
+
+    'error_log' => BASE_PATH . 'storage/logs/',
 
 ];

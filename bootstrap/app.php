@@ -7,13 +7,6 @@
  */
 define('CUBER_START', microtime(true));
 
-define('APP_DEBUG', true);
-ini_set('display_errors', 'on');
-error_reporting(-1);
-
-date_default_timezone_set('PRC');
-header("Content-type: text/html; charset=utf-8");
-
 /**
  * Register The Auto Loader
  */

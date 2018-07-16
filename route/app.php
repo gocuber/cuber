@@ -9,7 +9,7 @@
 Route::get('/', 'Index@index');
 
 Route::get('welcome/{name}', function($name = 'Cuber'){
-	echo 'Hello ' . $name;
+    echo 'Hello ' . $name;
 }, ['name'=>'|[a-z]+']);
 
 Route::get('demo', 'Demo@welcome');

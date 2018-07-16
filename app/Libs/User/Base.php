@@ -10,9 +10,9 @@ namespace App\Libs\User;
 class Base
 {
 
-	public function get()
-	{
+    public function get()
+    {
         return 'App\Libs\User\Base';
-	}
+    }
 
 }

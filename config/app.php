@@ -37,7 +37,7 @@ return [
     // alias
     'alias' => [
         'Route' => 'Cuber\\Foundation\\Route',
-        'View' => 'Cuber\\Foundation\\View',
+        'View'  => 'Cuber\\Foundation\\View',
     ],
 
     // cookie配置

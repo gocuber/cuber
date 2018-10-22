@@ -15,4 +15,4 @@ require __DIR__ . '/../vendor/autoload.php';
 /**
  * Run The Application
  */
-(new Cuber\Foundation\Application(__DIR__ . '/../'))->run();
+(new Cuber\Foundation\Application(realpath(__DIR__ . '/../')))->run();

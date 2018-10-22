@@ -40,9 +40,32 @@ return [
         'View'  => 'Cuber\\Foundation\\View',
     ],
 
+    // 模块配置
+    'module' => [
+        'default' => [
+            'route'       => 'app',
+            'controllers' => 'App\\Controllers\\',
+        ],
+        'cli' => [
+            'route'       => 'cli',
+            'controllers' => 'App\\cli\\',
+        ],
+    ],
+
     // cookie配置
-    'cookie_prefix' => null,  // cookie 前缀
-    'cookie_domain' => null,  // cookie 域
+    'cookie' => [
+        'prefix' => null,  // cookie 前缀
+        'domain' => null,  // cookie 域
+    ],
+
+    // session配置
+    'session' => [
+        'driver'  => env('SESSION_DRIVER', 'file'),
+        'connect' => 'session',
+        'prefix'  => '',
+        'cookie'  => null,    // session_id cookie key
+        'time'    => null,
+    ],
 
     // Mysql数据库配置
     'db' => [
@@ -85,7 +108,7 @@ return [
         ],
         'session' => [
             'dir'       => BASE_PATH . 'storage/filecache/session/',
-            'is_subdir' => 0,
+            'is_subdir' => 1,
         ],
     ],
 

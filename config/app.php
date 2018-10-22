@@ -48,7 +48,7 @@ return [
         ],
         'cli' => [
             'route'       => 'cli',
-            'controllers' => 'App\\cli\\',
+            'controllers' => 'App\\Cli\\',
         ],
     ],
 

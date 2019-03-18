@@ -14,7 +14,7 @@ class Index extends Controller
 
     public function index()
     {
-        $this->display('index', ['name'=>'Cuber']);
+        view('welcome');
     }
 
 }

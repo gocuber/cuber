@@ -32,12 +32,18 @@ return [
     'models_namespace' => 'App\\Models\\',
 
     // views dir
-    'views' => BASE_PATH . 'app/views/',
+    'views' => base_path('app/views/'),
 
-    // alias
-    'alias' => [
-        'Route' => 'Cuber\\Foundation\\Route',
-        'View'  => 'Cuber\\Foundation\\View',
+    // aliases
+    'aliases' => [
+        'Route' => 'Cuber\\Support\\Facades\\Route',
+        'View' => 'Cuber\\Support\\Facades\\View',
+    ],
+
+    // providers
+    'providers' => [
+        Cuber\Foundation\Service::class,
+        Cuber\Redis\Service::class,
     ],
 
     // 模块配置
@@ -45,6 +51,7 @@ return [
         'default' => [
             'route'       => 'app',
             'controllers' => 'App\\Controllers\\',
+            'views'       => base_path('app/views/'),
         ],
         'cli' => [
             'route'       => 'cli',
@@ -103,26 +110,19 @@ return [
     // FileCache配置
     'filecache' => [
         'default' => [
-            'default'   => BASE_PATH . 'storage/filecache/default/',  // 缓存目录
-            'is_subdir' => 1,                                         // 是否自动生成子级缓存目录 默认1是 0否
+            'dir'       => base_path('storage/filecache/default/'),  // 缓存目录
+            'is_subdir' => 1,                                        // 是否自动生成子级缓存目录 默认1是 0否
         ],
         'session' => [
-            'dir'       => BASE_PATH . 'storage/filecache/session/',
+            'dir'       => base_path('storage/filecache/session/'),
             'is_subdir' => 1,
         ],
     ],
 
     // 异常
-    'error_log' => BASE_PATH . 'storage/logs/',
+    'error_log' => base_path('storage/logs/'),
 
     // authcode
     'authcode' => env('AUTH_CODE', ''),
-
-    // rsa
-    'rsa' => [
-        'dir'  => BASE_PATH . 'storage/rsa/',
-        'num'  => 200,
-        'code' => env('RSA_CODE', ''),
-    ],
 
 ];

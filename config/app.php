@@ -23,7 +23,7 @@ return [
 
     'charset' => 'utf-8',
 
-    'debug' => env('DEBUG', false),
+    'debug' => env('DEBUG', true),
 
     // controllers namespace prefix
     'controllers_namespace' => 'App\\Controllers\\',
@@ -42,8 +42,13 @@ return [
 
     // providers
     'providers' => [
-        Cuber\Foundation\Service::class,
-        Cuber\Redis\Service::class,
+        Cuber\Foundation\CoreServiceProvider::class,
+        Cuber\Cookie\CookieServiceProvider::class,
+        Cuber\Session\SessionServiceProvider::class,
+        Cuber\FileCache\FileCacheServiceProvider::class,
+        Cuber\Memcache\MemcacheServiceProvider::class,
+        Cuber\Redis\RedisServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
     ],
 
     // 模块配置

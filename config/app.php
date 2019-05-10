@@ -45,6 +45,7 @@ return [
         Cuber\Foundation\CoreServiceProvider::class,
         Cuber\Cookie\CookieServiceProvider::class,
         Cuber\Session\SessionServiceProvider::class,
+        Cuber\Database\DatabaseServiceProvider::class,
         Cuber\FileCache\FileCacheServiceProvider::class,
         Cuber\Memcache\MemcacheServiceProvider::class,
         Cuber\Redis\RedisServiceProvider::class,
@@ -72,11 +73,12 @@ return [
 
     // session配置
     'session' => [
-        'driver'  => env('SESSION_DRIVER', 'file'),
-        'connect' => 'session',
-        'prefix'  => '',
-        'cookie'  => null,    // session_id cookie key
-        'time'    => null,
+        'driver'     => env('SESSION_DRIVER', 'file'),
+        'connect'    => 'session',      // 存储连接实例
+        'prefix'     => 'CUBERSESS_',   // 存储中的 session_id 前缀
+        'table_name' => 'app_session',  // 使用数据库存储时的表名
+        'cookie_key' => 'CUBERSESSID',  // Cookie中用来存储session_id的cookie_key
+        'expire'     => 86400 * 7,      // 到期失效的秒数 0为永久
     ],
 
     // Mysql数据库配置
@@ -119,7 +121,7 @@ return [
             'is_subdir' => 1,                                        // 是否自动生成子级缓存目录 默认1是 0否
         ],
         'session' => [
-            'dir'       => base_path('storage/filecache/session/'),
+            'dir'       => base_path('storage/sessions/'),
             'is_subdir' => 1,
         ],
     ],
